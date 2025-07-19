@@ -31,23 +31,73 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Parallax effect for video background
+    // Enhanced zoom effect focused on the window area
     const video = document.getElementById('bgVideo');
     const videoContainer = document.querySelector('.video-background');
     
-    document.addEventListener('mousemove', function(e) {
-        if (video && videoContainer) {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
+    if (video && videoContainer) {
+        // Target coordinates for the window (x=880, y=403)
+        const targetX = 880;
+        const targetY = 403;
+        
+        // Get video dimensions once loaded
+        video.addEventListener('loadedmetadata', function() {
+            const videoWidth = video.videoWidth;
+            const videoHeight = video.videoHeight;
             
-            // Calculate the movement amount (subtle effect)
-            const moveX = (mouseX - 0.5) * 30;
-            const moveY = (mouseY - 0.5) * 30;
+            // Calculate target point as percentage of video dimensions
+            const targetXPercent = targetX / videoWidth;
+            const targetYPercent = targetY / videoHeight;
             
-            // Apply the transform to the video with a larger scale to ensure full coverage
-            video.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) translate(-50%, -50%) scale(1.2)`;
-        }
-    });
+            // Initial position and scale
+            let scale = 1.05;
+            let currentX = -50;
+            let currentY = -50;
+            let zoomPhase = 0;
+            
+            // Function to update the transform
+            function updateTransform() {
+                video.style.transform = `translate(${currentX}%, ${currentY}%) scale(${scale})`;
+            }
+            
+            // Set initial transform
+            updateTransform();
+            
+            // Continuous zoom animation focused on the window
+            setInterval(() => {
+                // Update zoom phase (0 to 2π)
+                zoomPhase += 0.005;
+                if (zoomPhase >= Math.PI * 2) zoomPhase = 0;
+                
+                // Calculate scale with sinusoidal oscillation
+                scale = 1.05 + 0.03 * Math.sin(zoomPhase);
+                
+                // Calculate position adjustments to keep the window area more centered during zoom
+                // This creates a subtle drift toward the window as we zoom in
+                const xAdjust = (targetXPercent - 0.5) * 2 * Math.sin(zoomPhase) * 5;
+                const yAdjust = (targetYPercent - 0.5) * 2 * Math.sin(zoomPhase) * 5;
+                
+                currentX = -50 + xAdjust;
+                currentY = -50 + yAdjust;
+                
+                // Apply the transform
+                updateTransform();
+            }, 50);
+            
+            // Very subtle movement on mouse move
+            document.addEventListener('mousemove', function(e) {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                // Calculate the movement amount (very subtle effect)
+                const moveX = (mouseX - 0.5) * 3;
+                const moveY = (mouseY - 0.5) * 3;
+                
+                // Apply the transform with the current scale and position
+                video.style.transform = `translate(${currentX + moveX}%, ${currentY + moveY}%) scale(${scale})`;
+            });
+        });
+    }
     
     // Scroll indicator functionality
     const scrollIndicator = document.querySelector('.scroll-indicator');
@@ -267,4 +317,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
-});
+});   
+ // Navigation bar visibility control
+    document.addEventListener('mousemove', function(e) {
+        const windowHeight = window.innerHeight;
+        const mouseY = e.clientY;
+        const threshold = windowHeight - 100; // Show nav when mouse is within 100px of bottom
+        
+        if (mouseY > threshold) {
+            document.body.classList.add('nav-visible');
+        } else {
+            document.body.classList.remove('nav-visible');
+        }
+    });
+    
+    // For touch devices, show navigation bar on scroll down and hide on scroll up
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+            // Scrolling down
+            document.body.classList.remove('nav-visible');
+        } else {
+            // Scrolling up
+            document.body.classList.add('nav-visible');
+        }
+        lastScrollTop = st <= 0 ? 0 : st; // For mobile or negative scrolling
+    }, false);
