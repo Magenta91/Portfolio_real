@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokesh Kumar | Tech Enthusiast & ML Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="assets/3141211-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Terminal Header -->
+    <div class="terminal-header">
+        <div class="terminal-buttons">
+            <span class="terminal-button close"></span>
+            <span class="terminal-button minimize"></span>
+            <span class="terminal-button maximize"></span>
+        </div>
+        <div class="terminal-title">lokesh@kali:~</div>
+        <div class="social-icons">
+            <a href="https://github.com/Magenta91" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/lokeshkumar" target="_blank" class="social-icon"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://drive.google.com/file/d/13mTirY4GGjpxalmWfJyzyJQn_qfNqYCQ/view?usp=sharing" target="_blank"
+                class="social-icon resume-icon"><i class="fas fa-file-alt"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Terminal Content -->
+    <div class="terminal-content">
+        <!-- Home Section -->
+        <section id="home" class="terminal-section">
+            <div class="terminal-animation">
+                <div class="typing-container">
+                    <div class="typing-text">
+                        <span class="command">sudo ./start_portfolio.sh</span>
+                        <div class="response">
+                            <p class="typing-line">[+] Initializing system...</p>
+                            <p class="typing-line">[+] Loading profile data...</p>
+                            <p class="typing-line">[+] Establishing secure connection...</p>
+                            <p class="typing-line">[+] Access granted.</p>
+                            <div class="welcome-container">
+                                <p class="welcome-text">Hi, I'm <span class="highlight">Lokesh Kumar</span></p>
+                                <p class="subtitle">Tech Enthusiast & ML Developer</p>
+                                <div class="home-tags">
+                                    <span class="home-tag">Python</span>
+                                    <span class="home-tag">Machine Learning</span>
+                                    <span class="home-tag">Web Dev</span>
+                                    <span class="home-tag">App Dev</span>
+                                    <span class="home-tag">Cybersecurity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <p>Scroll down to explore</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="terminal-section">
+            <div class="section-header">
+                <span class="command">cat about.md</span>
+            </div>
+            <div class="section-content">
+                <div class="about-container">
+                    <div class="about-text">
+                        <h2>About_Me</h2>
+                        <p>I'm a Computer Science undergraduate with a <span class="highlight-subtle">specialization in
+                                Python, Machine Learning, and Web/App Development</span>. My technical journey is driven
+                            by a passion for creating intelligent solutions that address real-world challenges.</p>
+
+                        <p>With expertise in <span class="highlight-subtle">machine learning, NLP, and full-stack
+                                development</span>, I focus on building innovative applications across multiple
+                            platforms. My project portfolio ranges from <span class="highlight-subtle">gesture-based
+                                file sharing systems to mobile apps and fraud detection tools</span> using advanced ML
+                            techniques.</p>
+
+                        <p>When I'm not coding, you can find me participating in hackathons (placing in events at IIM
+                            Shillong and Unstop), running marathons, or exploring the latest advancements in AI and
+                            cybersecurity technologies.</p>
+                    </div>
+                    <div class="terminal-silhouette">
+                        <div class="code-animation">
+                            <pre><code>
+class Developer:
+    def __init__(self):
+        self.name = "Lokesh Kumar"
+        self.role = "ML Developer"
+        self.languages = ["Python", "Java", "C++"]
+        self.interests = ["AI/ML", "Cybersecurity", 
+                         "Data Science", "Web Dev"]
+    
+    def code(self, project):
+        return f"Building {project} with passion"
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="terminal-section">
+            <div class="section-header">
+                <span class="command">grep -r "experience" --include="*.json" ./data/</span>
+            </div>
+            <div class="section-content">
+                <h2>Work_Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Quant Analyst and ML Model Training Intern</h3>
+                            <h4>Clever Bharat</h4>
+                            <p class="timeline-date">Apr 2025 - Jun 2025</p>
+                            <ul>
+                                <li>Managed <span class="highlight-subtle">Google Workspace and AWS Big Query</span> for
+                                    data processing and analysis</li>
+                                <li>Built and optimized <span class="highlight-subtle">machine learning models</span>
+                                    for market analysis and prediction</li>
+                                <li>Collaborated with cross-functional teams to integrate ML solutions</li>
+                                <li>Implemented <span class="highlight-subtle">data visualization techniques</span> to
+                                    present insights to stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="terminal-section">
+            <div class="section-header">
+                <span class="command">find ./projects -type f -name "*.md" | xargs cat</span>
+            </div>
+            <div class="section-content">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <h3>Air Transfer</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/Magenta91" class="project-link"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-tech">Python, Computer Vision, Hand Recognition</p>
+                        <p class="project-description">Gesture-based file sharing system that uses <span
+                                class="highlight-subtle">computer vision and hand recognition</span> technology to
+                            enable intuitive file transfers between devices through simple hand movements.</p>
+                    </div>
+
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <h3>ISL Simplifier</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/Magenta91" class="project-link"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-tech">Python, GenAI, Computer Vision</p>
+                        <p class="project-description"><span class="highlight-subtle">GenAI-powered</span> Sign Language
+                            Translator that converts Indian Sign Language gestures into text and speech, making
+                            communication more accessible for the hearing impaired.</p>
+                    </div>
+
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <h3>Cyberfraud Classifier</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/Magenta91" class="project-link"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-tech">Python, NLP, Spacy, NLTK</p>
+                        <p class="project-description"><span class="highlight-subtle">NLP-based</span> system that
+                            analyzes Hinglish data to identify and classify potential cyber fraud attempts, helping
+                            users stay safe from online scams and phishing attacks.</p>
+                    </div>
+
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <h3>Quick Loan Scam Advisor</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/Magenta91" class="project-link"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-tech">Python, ML, Data Analysis</p>
+                        <p class="project-description">Python-based scoring system that evaluates loan offers for
+                            potential scams, providing users with a <span class="highlight-subtle">safety score</span>
+                            and recommendations to avoid predatory lending practices.</p>
+                    </div>
+
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <h3>Khana Ready App</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-tech">Flutter, Firebase, UPI</p>
+                        <p class="project-description">Mobile application for <span
+                                class="highlight-subtle">pre-ordering food</span> in college campus. Features include
+                            real-time order tracking, payment integration via UPI, and personalized recommendations to
+                            enhance the campus dining experience.</p>
+                    </div>
+
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-header">
+                            <h3>Legal Dost</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-tech">Flutter, Firebase, NLP</p>
+                        <p class="project-description">Mobile app providing <span class="highlight-subtle">legal
+                                assistance</span> and information to users. Implemented a chatbot using NLP to answer
+                            common legal questions and connect users with appropriate legal resources and professionals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="terminal-section">
+            <div class="section-header">
+                <span class="command">ls -la skills/</span>
+            </div>
+            <div class="section-content">
+                <h2>Technical_Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Machine Learning & AI</h3>
+                        <ul class="skill-list">
+                            <li>NLP</li>
+                            <li>Spacy</li>
+                            <li>NLTK</li>
+                            <li>Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Generative AI</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Mobile & Web Development</h3>
+                        <ul class="skill-list">
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>Flutter</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Cloud & Tools</h3>
+                        <ul class="skill-list">
+                            <li>AWS</li>
+                            <li>Azure</li>
+                            <li>Git</li>
+                            <li>Google Workspace</li>
+                            <li>AWS Big Query</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="terminal-section">
+            <div class="section-header">
+                <span class="command">cat ./data/education.txt</span>
+            </div>
+            <div class="section-content">
+                <h2>Education</h2>
+                <div class="education-container animate-on-scroll">
+                    <div class="education-item">
+                        <h3>B.E. in CSE with Specialization in InfoSec</h3>
+                        <h4>Chandigarh University</h4>
+                        <p class="education-date">2023 - 2027</p>
+                        <p>Focusing on <span class="highlight-subtle">Information Security, Machine Learning, and
+                                Software Development</span></p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>XII (CBSE)</h3>
+                        <h4>Bridgeford School, Ranchi</h4>
+                        <p class="education-date">2023</p>
+                        <p>Focused on Computer Science and Mathematics</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>X (CBSE)</h3>
+                        <h4>Bridgeford School, Ranchi</h4>
+                        <p class="education-date">2021</p>
+                        <p>Developed strong foundation in Science and Mathematics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="terminal-section">
+            <div class="section-header">
+                <span class="command">echo "Let's connect" > contact.txt</span>
+            </div>
+            <div class="section-content">
+                <h2>Contact_Me</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p>Interested in collaborating or have a project in mind? Feel free to reach out!</p>
+                        <div class="contact-links">
+                            <a href="mailto:officialgautam001@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>officialgautam001@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/Magenta91" target="_blank" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/Magenta91</span>
+                            </a>
+                            <a href="https://linkedin.com/in/lokeshkumar" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>linkedin.com/in/lokeshkumar</span>
+                            </a>
+                            <a href="tel:+919523860283" class="contact-link">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 9523860283</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="from_name">Name:</label>
+                                <input type="text" id="from_name" name="from_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reply_to">Email:</label>
+                                <input type="email" id="reply_to" name="reply_to" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="terminal-nav">
+        <ul>
+            <li><a href="#home" class="nav-link active" data-section="home">~/home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">~/about</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">~/experience</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">~/projects</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">~/skills</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">~/education</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">~/contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="terminal-footer">
+        <p>&copy; 2025 Lokesh Kumar | <span class="cursor-blink">█</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
